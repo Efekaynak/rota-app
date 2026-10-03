@@ -1,0 +1,51 @@
+{
+  "common": {
+    "appName": "ROTA",
+    "continue": "Devam Et",
+    "cancel": "İptal",
+    "save": "Kaydet",
+    "delete": "Sil",
+    "edit": "Düzenle",
+    "share": "Paylaş",
+    "back": "Geri",
+    "search": "Ara...",
+    "loading": "Yükleniyor...",
+    "error": "Bir hata oluştu",
+    "retry": "Tekrar Dene",
+    "success": "Başarılı",
+    "km": "km",
+    "m": "m",
+    "min": "dk",
+    "hour": "sa",
+    "pace": "Tempo",
+    "speed": "Hız",
+    "calories": "Kalori",
+    "xp": "XP"
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "activities": "Aktiviteler",
+    "routes": "Rotalar",
+    "community": "Topluluk",
+    "messages": "Mesajlar",
+    "profile": "Profil"
+  },
+  "activities": {
+    "swimming": "Yüzme",
+    "running": "Koşu",
+    "walking": "Yürüyüş",
+    "cycling": "Bisiklet",
+    "climbing": "Tırmanış",
+    "fishing": "Balıkçılık",
+    "startActivity": "Aktivite Başlat",
+    "manualEntry": "Elle Gir",
+    "setGoal": "Hedef Belirle"
+  },
+  "gamification": {
+    "level": "Seviye",
+    "streak": "Günlük Seri",
+    "streakFrozen": "Donduruldu",
+    "badges": "Rozetler",
+    "completed": "Tamamlandı!"
+  }
+}
