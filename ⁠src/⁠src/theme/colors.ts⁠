@@ -1,0 +1,70 @@
+export const colors = {
+  light: {
+    primary: '#1CB0A8', // Canlı Turkuaz-Yeşil
+    primaryDark: '#14807A',
+    secondary: '#1E88E5', // Okyanus Mavisi
+    secondaryDark: '#1565C0',
+    accent: '#FFC800', // Güneş Sarısı (XP/Rozet)
+    accentDark: '#D4A600',
+    danger: '#FF4B4B', // Tehlike / İptal
+    dangerDark: '#EA2B2B',
+    success: '#46C45A', // Başarı / Tamamlandı
+    successDark: '#33A344',
+    warning: '#FF9800',
+    warningDark: '#F57C00',
+
+    // Zemin ve Nötr Renkler
+    background: '#FFFFFF',
+    surface: '#F7F7F7',
+    card: '#FFFFFF',
+    border: '#E5E5E5',
+    borderDark: '#CECECE',
+    text: '#3C3C3C',
+    textSecondary: '#777777',
+    textMuted: '#AFAFAF',
+    white: '#FFFFFF',
+    black: '#121212',
+
+    // Aktivite Türü Özel Renkleri
+    swimming: '#00BCD4',
+    running: '#FF5722',
+    walking: '#8BC34A',
+    cycling: '#E91E63',
+    climbing: '#9C27B0',
+    fishing: '#009688',
+  },
+  dark: {
+    primary: '#20C9C0',
+    primaryDark: '#19A19A',
+    secondary: '#42A5F5',
+    secondaryDark: '#1E88E5',
+    accent: '#FFD54F',
+    accentDark: '#FFC107',
+    danger: '#FF6B6B',
+    dangerDark: '#EE5253',
+    success: '#51D867',
+    successDark: '#3CA34E',
+    warning: '#FFA726',
+    warningDark: '#FB8C00',
+
+    background: '#121212',
+    surface: '#1E1E1E',
+    card: '#242424',
+    border: '#333333',
+    borderDark: '#444444',
+    text: '#F0F0F0',
+    textSecondary: '#AAAAAA',
+    textMuted: '#666666',
+    white: '#FFFFFF',
+    black: '#000000',
+
+    swimming: '#26C6DA',
+    running: '#FF7043',
+    walking: '#9CCC65',
+    cycling: '#EC407A',
+    climbing: '#AB47BC',
+    fishing: '#26A69A',
+  },
+};
+
+export type ThemeColors = typeof colors.light;
