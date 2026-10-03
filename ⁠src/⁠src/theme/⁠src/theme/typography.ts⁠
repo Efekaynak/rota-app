@@ -1,0 +1,22 @@
+export const typography = {
+  fontFamily: {
+    bold: 'Nunito_800Bold',
+    semiBold: 'Nunito_700Bold',
+    medium: 'Nunito_600SemiBold',
+    regular: 'Nunito_400Regular',
+  },
+  sizes: {
+    xs: 12,
+    sm: 14,
+    md: 16,
+    lg: 18,
+    xl: 22,
+    xxl: 28,
+    hero: 36,
+  },
+  lineHeights: {
+    tight: 1.15,
+    normal: 1.3,
+    relaxed: 1.5,
+  },
+};
