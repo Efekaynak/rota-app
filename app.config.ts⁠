@@ -1,0 +1,92 @@
+import { ExpoConfig, ConfigContext } from 'expo/config';
+
+export default ({ config }: ConfigContext): ExpoConfig => ({
+  ...config,
+  name: 'ROTA',
+  slug: 'rota-outdoor',
+  version: '1.0.0',
+  orientation: 'portrait',
+  icon: './assets/icon.png',
+  userInterfaceStyle: 'automatic',
+  splash: {
+    image: './assets/splash.png',
+    resizeMode: 'contain',
+    backgroundColor: '#1CB0A8',
+  },
+  assetBundlePatterns: ['**/*'],
+  ios: {
+    supportsTablet: false,
+    bundleIdentifier: 'com.rota.outdoor',
+    usesAppleSignIn: true,
+    infoPlist: {
+      NSLocationWhenInUseUsageDescription:
+        'ROTA, açık hava aktivitelerinizi canlı takip etmek ve harita üzerinde rota ilerlemenizi göstermek için konumunuza erişim ister.',
+      NSLocationAlwaysAndWhenInUseUsageDescription:
+        'ROTA, uygulama arka plandayken bile koşu, bisiklet veya yürüyüş rotalarınızı kesintisiz kaydetmek için arka plan konum erişimi gerektirir.',
+      NSLocationAlwaysUsageDescription:
+        'Aktivitelerinizin tam mesafe ve harita rotasını kaydedebilmek için arka plan konum erişimi gereklidir.',
+      NSCameraUsageDescription:
+        'Aktivite ve rotalarınıza fotoğraf ekleyebilmek için kamera erişimi gereklidir.',
+      NSPhotoLibraryUsageDescription:
+        'Aktivitelerinizde ve profilinizde görsel kullanabilmeniz için fotoğraf kitaplığına erişim gereklidir.',
+      UIBackgroundModes: ['location', 'fetch'],
+    },
+  },
+  android: {
+    adaptiveIcon: {
+      foregroundImage: './assets/adaptive-icon.png',
+      backgroundColor: '#1CB0A8',
+    },
+    package: 'com.rota.outdoor',
+    permissions: [
+      'ACCESS_COARSE_LOCATION',
+      'ACCESS_FINE_LOCATION',
+      'ACCESS_BACKGROUND_LOCATION',
+      'FOREGROUND_SERVICE',
+      'FOREGROUND_SERVICE_LOCATION',
+      'CAMERA',
+      'READ_EXTERNAL_STORAGE',
+      'WRITE_EXTERNAL_STORAGE',
+      'POST_NOTIFICATIONS',
+    ],
+  },
+  web: {
+    favicon: './assets/favicon.png',
+  },
+  plugins: [
+    'expo-router',
+    'expo-secure-store',
+    'expo-apple-authentication',
+    [
+      'expo-location',
+      {
+        locationAlwaysAndWhenInUsePermission:
+          'ROTA, canlı aktivite kaydı ve arka plan mesafe takibi için konum izni gerektirir.',
+        isAndroidBackgroundLocationEnabled: true,
+      },
+    ],
+    [
+      '@rnmapbox/maps',
+      {
+        RNMapboxMapsImpl: 'mapbox',
+        RNMapboxMapsDownloadToken: process.env.MAPBOX_DOWNLOAD_TOKEN,
+      },
+    ],
+    [
+      'expo-image-picker',
+      {
+        photosPermission:
+          'ROTA profil resmi ve aktivite fotoğrafları seçmek için fotoğraflarınıza erişmek ister.',
+      },
+    ],
+  ],
+  extra: {
+    eas: {
+      projectId: '00000000-0000-0000-0000-000000000000',
+    },
+    supabaseUrl: process.env.EXPO_PUBLIC_SUPABASE_URL,
+    supabaseAnonKey: process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY,
+    mapboxAccessToken: process.env.EXPO_PUBLIC_MAPBOX_ACCESS_TOKEN,
+  },
+  scheme: 'rota',
+});
